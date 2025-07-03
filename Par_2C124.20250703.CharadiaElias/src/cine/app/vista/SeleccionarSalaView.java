@@ -34,12 +34,13 @@ public class SeleccionarSalaView extends VBox{
             btnSala.setOnAction(e -> {
                 switch (sl.getNumero()) {
                     case 1:
-                        SalaView salaview = new SalaView(stage,cliente,cine,sl);
-                        stage.setScene(new Scene(salaview));
+                        LogicaNavegacion.irSalaView(stage, cliente, cine, sl);
                         break;
                     case 2:
+                        LogicaNavegacion.irSalaView(stage, cliente, cine, sl);
                         break;
                     case 3:
+                        LogicaNavegacion.irSalaView(stage, cliente, cine, sl);
                         break;
                     default:
                         break;
@@ -51,7 +52,7 @@ public class SeleccionarSalaView extends VBox{
         
         
         btnSalir.setOnAction(e -> {
-            LogicaNavegacion
+            LogicaNavegacion.Salir(stage, cine);
         });
 //        Label bienvenida = new Label("Bienvenido al Cine");
 //        Button btnVerSala = new Button("Ver sala");

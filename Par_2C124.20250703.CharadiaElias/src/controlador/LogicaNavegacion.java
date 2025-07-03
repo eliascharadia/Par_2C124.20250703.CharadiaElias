@@ -6,9 +6,11 @@ package controlador;
 
 import cine.app.modelo.Cine;
 import cine.app.modelo.Cliente;
+import cine.app.modelo.Sala;
 import cine.app.vista.LoginView;
 import cine.app.vista.MenuView;
 import cine.app.vista.RegistrarUsuarioView;
+import cine.app.vista.SalaView;
 import cine.app.vista.SeleccionarSalaView;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -36,5 +38,10 @@ public class LogicaNavegacion {
     public static void irRagistrarView(Stage stage, Cine cine){
          RegistrarUsuarioView ventanaRegistro = new RegistrarUsuarioView(stage, cine);
         stage.setScene(new Scene(ventanaRegistro));
+    }
+    
+    public static void irSalaView(Stage stage, Cliente cliente, Cine cine, Sala sl){
+        SalaView salaview = new SalaView(stage,cliente,cine,sl);
+        stage.setScene(new Scene(salaview));
     }
 }

@@ -46,7 +46,7 @@ public class Par_2C12420250703CharadiaElias extends Application{
         
         LoginView login = new LoginView(stage, cine);
         stage.setScene(new Scene(login));
-        stage.setTitle("Cajero - Inicio de sesión");
+        stage.setTitle("Cinemark");
         
         // Guardar al salir
         stage.setOnCloseRequest(eh -> {

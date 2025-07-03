@@ -37,8 +37,6 @@ public class Cine implements Serializable{
     
     public Cliente buscarCliente(String email, String contraseña){
         for (Cliente cl: clientes){
-            System.out.println(cl.getEmail());
-            System.out.println(cl.getContraseña());
             if (cl.validarEmail(email) && cl.validarContraseña(contraseña)){
                 return cl;
             }
@@ -48,5 +46,9 @@ public class Cine implements Serializable{
     
     public void agregarSala(int numero, String pelicula, int filas, int columnas){
         this.salas.add(new Sala(numero,pelicula,filas,columnas));
+    }
+    
+    public void agregarEntrada(Cliente cliente, Sala sala, Butaca butaca){
+        this.entradas.add(new Entrada(cliente, sala, butaca));
     }
 }
