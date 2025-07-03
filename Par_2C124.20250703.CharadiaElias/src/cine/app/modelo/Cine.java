@@ -37,6 +37,8 @@ public class Cine implements Serializable{
     
     public Cliente buscarCliente(String email, String contraseña){
         for (Cliente cl: clientes){
+            System.out.println(cl.getEmail());
+            System.out.println(cl.getContraseña());
             if (cl.validarEmail(email) && cl.validarContraseña(contraseña)){
                 return cl;
             }
